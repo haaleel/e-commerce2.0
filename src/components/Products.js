@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StarIcon } from "@heroicons/react/outline";
+import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
 import Image from "next/image";
 // import Currency from "react-Currency-formatter";
@@ -12,7 +12,7 @@ function Products({ id, title, price, description, category, image }) {
   );
   const [hasprime] = useState(Math.random() < 0.5);
   return (
-    <div className=" relative flex flex-col  m-5 bg-white z-20 p-10 ">
+    <div className=" relative flex flex-col  m-5 bg-white z-20 p-10 rounded-md  ">
       <p className=" absolute top-2 right-2 text-xs italic text-gray-400">
         {category}
       </p>
@@ -23,7 +23,7 @@ function Products({ id, title, price, description, category, image }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon className=" h-5 " />
+            <StarIcon className=" h-5 text-yellow-500" />
           ))}
       </div>
 

@@ -61,12 +61,12 @@ function Header() {
         <p className="link">Prime video</p>
         <p>Amazon Bussines</p>
         <p>Today's Deal</p>
-        <p className="hidden lg:inline-flex">Electronics</p>
-        <p className="hidden lg:inline-flex">Food and Grocery</p>
-        <p className="hidden lg:inline-flex">Prime</p>
-        <p className="hidden lg:inline-flex">Buy Again</p>
-        <p className="hidden lg:inline-flex">shopper toolkit</p>
-        <p className="hidden lg:inline-flex">Health and personal care</p>
+        <p className=" link hidden lg:inline-flex">Electronics</p>
+        <p className=" link hidden lg:inline-flex">Food and Grocery</p>
+        <p className=" link hidden lg:inline-flex">Prime</p>
+        <p className=" link hidden lg:inline-flex">Buy Again</p>
+        <p className=" link hidden lg:inline-flex">shopper toolkit</p>
+        <p className=" link hidden lg:inline-flex">Health and personal care</p>
       </div>
     </header>
   );

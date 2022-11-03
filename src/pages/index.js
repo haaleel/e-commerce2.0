@@ -17,7 +17,7 @@ export default function Home({ products }) {
         <Banner />
         {/* products feed */}
         <ProductFeed products={products} /> 
-       {console.log(products)}
+       {/* {console.log(products)} */}
       </main>
     </div>
   );
