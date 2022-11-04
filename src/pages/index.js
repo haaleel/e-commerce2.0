@@ -10,14 +10,12 @@ export default function Home({ products }) {
         <title>Amazon 2.0</title>
       </Head>
 
-      <Header />
-      <main className=" max-w-screen-2xl mx-auto">
+      <Header className=" "   />
+      <main className="  max-w-screen-2xl mx-auto">
         {/* banner */}
-
         <Banner />
         {/* products feed */}
-        <ProductFeed products={products} /> 
-       {/* {console.log(products)} */}
+        <ProductFeed products={products} />
       </main>
     </div>
   );
@@ -27,7 +25,6 @@ export async function getServerSideProps(context) {
     res.json()
   );
 
- 
   return {
     props: {
       products,
