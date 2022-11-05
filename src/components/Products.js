@@ -58,6 +58,8 @@ dipatch(addToBasket(product))
       {hasprime && (
         <div className=" flex items-center space-x-2 -mt-5">
           <img
+          loading="
+          lazy"
             className=" w-12 "
             src="https://links.papareact.com/fdw"
             alt=""

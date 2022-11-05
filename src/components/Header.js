@@ -32,7 +32,7 @@ function Header() {
   return (
     <header>
       {/*top nav*/}
-      <div className="  flex bg-amazon_blue items-center flex-grow p-1 py-2 sticky top-0 z-">
+      <div className="  flex bg-amazon_blue items-center flex-grow p-1 py-2 ">
         <div className="flex mt-2 flex-grow items-center sm:flex-grow-0">
           <Image
             onClick={() => router.push('/')}
