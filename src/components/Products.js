@@ -18,6 +18,7 @@ function Products({ id, title, price, description, category, image }) {
 const dipatch=useDispatch()
   const addItemToBasket = () => {
     const product = {
+      
       id,
       title,
       price,

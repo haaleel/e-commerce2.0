@@ -4,15 +4,41 @@ import Header from "../components/Header";
 import { useSelector } from "react-redux";
 import { selectItems, selectTotal } from "../slices/basketSlice";
 import CheckoutProduct from "../components/CheckoutProduct";
-import Currency  from "react-currency-formatter";
-
+import Currency from "react-currency-formatter";
+import { loadStripe } from "@stripe/stripe-js";
 import { useSession } from "next-auth/react";
-import PopupConfrim from "../components/PopupConfrim";
+import axios from "axios";
+// import PopupConfrim from "../components/PopupConfrim";
 function checkout() {
   const items = useSelector(selectItems);
   const totals = useSelector(selectTotal);
   const session = useSession();
-  const [showPop, setShowPop] = useState(false);
+  // const [showPop, setShowPop] = useState(false);
+  const stripePromise = loadStripe(process.env.stripe_public_key);
+
+  const createCheckOutSession = async () => {
+    const stripe = await stripePromise;
+    // call backend
+    try {
+       const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items: items,
+      email: session?.data.user.email,
+    });
+
+    // redirect user/custmer to stripe checkout
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,
+    });
+    } 
+   
+catch (error) {
+  console.error(error.response.data)
+      
+    }
+    // if (result.error) {
+    //   alert(result.error.message );
+    // }
+  };
 
   return (
     <div className="  bg-gray-100">
@@ -56,17 +82,15 @@ function checkout() {
           {items.length > 0 && (
             <>
               <h2 className=" whitespace-nowrap">
-                Subtotal ({items.length} items ):{"b"}
+                Subtotal ({items.length} items ):{" "}
                 <span className=" font-bold">
                   <Currency quantity={totals} currency="INR" />
-                  
                 </span>
               </h2>
               <div>
                 <button
-                  onClick={() => {
-                    setShowPop(true);
-                  }}
+                  role="link"
+                  onClick={createCheckOutSession}
                   disabled={!session.data}
                   className={`button mt-2 ${
                     !session.data &&
@@ -80,7 +104,7 @@ function checkout() {
               </div>
             </>
           )}
-          {showPop&&< PopupConfrim   />} 
+          {/* {showPop&&< PopupConfrim   />}  */}
         </div>
       </main>
     </div>
