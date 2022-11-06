@@ -30,8 +30,8 @@ export default async (req, res) => {
     },
     line_items: transformedItem,
     mode: "payment",
-    success_url: `${process.env.HOST}index`,
-    cancel_url: `${process.env.HOST}/index`,
+    success_url: `${process.env.HOST}`,
+    cancel_url: `${process.env.HOST}`,
     metadata: {
       email,
       images: JSON.stringify(items.map((item) => item.image)),
