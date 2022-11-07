@@ -30,7 +30,7 @@ function Header() {
   // }
 
   return (
-    <header>
+    <header className=" sticky top-0 z-30">
       {/*top nav*/}
       <div className="  flex bg-amazon_blue items-center flex-grow p-1 py-2 ">
         <div className="flex mt-2 flex-grow items-center sm:flex-grow-0">
