@@ -63,9 +63,9 @@ dipatch(addToBasket(product))
           lazy"
             className=" w-12 "
             src="https://links.papareact.com/fdw"
-            alt=""
+            alt=" "
           />
-          <p className="  text-xs text-gray-500">Free Next-day Delivery</p>
+          <p className="  text-xs text-gray-500">Free Next-Day Delivery</p>
         </div>
       )}
 

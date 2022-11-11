@@ -57,8 +57,8 @@ function Header() {
           <div onClick={!session.data ? signIn : signOut} className="link">
             <p>
               {session && session.data
-                ? `hello,${session?.data?.user?.name || ""}`
-                : "sigin"}
+                ? `Hello,${session?.data?.user?.name || ""}`
+                : "Sigin"}
             </p>
             <p className="font font-extrabold md:text-sm">Account & Lists</p>
           </div>

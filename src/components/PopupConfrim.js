@@ -11,7 +11,7 @@ function PopupConfrim() {
         <div className='   p-10 bg-white shadow-lg rounded-md '>
 
 
-        <p>Thank you!!! </p>
+        <p>Thank You!!! </p>
             
             
            <p>Your Order Confirmed</p>
