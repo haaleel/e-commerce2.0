@@ -4,7 +4,6 @@ export default async (req, res) => {
 
   console.log(items);
   console.log(email);
-
   const transformedItem = items.map((item) => ({
     quantity: 1,
 
@@ -22,9 +21,7 @@ export default async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
 
-    shipping_options: [
-     { shipping_rate: "shr_1M17P4SI4LdpfGmi5ybsnkx7",}
-    ],
+    shipping_options: [{ shipping_rate: "shr_1M17P4SI4LdpfGmi5ybsnkx7" }],
     shipping_address_collection: {
       allowed_countries: ["IN", "AC", "DM", "AF"],
     },
