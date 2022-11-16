@@ -12,7 +12,7 @@ export default function Home({ products }) {
 
       <Header className=" sticky top-0 "   />
       <main className="  max-w-screen-2xl mx-auto">
-        {/* banner */}
+   
         <Banner />
         {/* products Feed */}
         <ProductFeed products={products} />
