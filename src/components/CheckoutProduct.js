@@ -61,7 +61,7 @@ function CheckoutProduct({
               src="https://links.papareact.com/fdw"
               alt=""
             />
-            <p className="  text-xs text-gray-500">Free Next-Day Delivery</p>
+            <p className="  text-xs text-gray-500">Free Next-day Delivery</p>
           </div>
         )}
       </div>

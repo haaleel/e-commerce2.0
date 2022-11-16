@@ -11,10 +11,10 @@ function PopupConfrim() {
         <div className='   p-10 bg-white shadow-lg rounded-md '>
 
 
-        <p>Thank You!!! </p>
+        <p>Thank You!! </p>
             
             
-           <p>Your Order Confirmed</p>
+           <p>Your Order Confirmed!</p>
            <div className='flex justify-center '>
             <button onClick={()=>router.push("/")} className='button mt-5   ' > Home Page  </button>
             </div>

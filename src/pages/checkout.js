@@ -82,7 +82,7 @@ catch (error) {
           {items.length > 0 && (
             <>
               <h2 className=" whitespace-nowrap">
-                SubTotal ({items.length} items ):{" "}
+                Subtotal ({items.length} items ):{" "}
                 <span className=" font-bold">
                   <Currency quantity={totals} currency="INR" />
                 </span>
